@@ -11,7 +11,8 @@ public class TeleportationModItems {
 
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, TeleportationMod.MOD_ID);
     public static final RegistryObject<Item> TELEPORTATION_ITEM = ITEMS.register("teleportation_item", () ->
-        new TeleportationItem(new Item.Properties().maxStackSize(1)
+        new TeleportationItem(new Item.Properties()
+                                .maxStackSize(1)
                                 .setNoRepair()
                                 .maxDamage(3)
                                 .group(ItemGroup.TRANSPORTATION)
@@ -20,7 +21,6 @@ public class TeleportationModItems {
 
     public static final RegistryObject<Item> TELEPORTATION_BLOCK = ITEMS.register("teleportation_block", () ->
         new BlockItem(TeleportationModBlocks.TELEPORTATION_BLOCK.get(), new Item.Properties()
-                .maxStackSize(1)
                 .group(ItemGroup.TRANSPORTATION)
         )
     );

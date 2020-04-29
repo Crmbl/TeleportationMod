@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:recipes/root",
-  "requirements": [
-    [
-      "has_item"
+  "rewards": {
+    "recipes": [
+      "teleportation_mod:teleportation_block"
     ]
-  ],
+  },
   "criteria": {
     "has_item": {
       "trigger": "minecraft:inventory_changed",
@@ -15,11 +15,18 @@
           }
         ]
       }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:teleportation_block"
+      }
     }
   },
-  "rewards": {
-    "recipes": [
-      "teleportation_mod:teleportation_block"
+  "requirements": [
+    [
+      "has_item",
+      "has_the_recipe"
     ]
-  }
+  ]
 }

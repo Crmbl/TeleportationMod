@@ -35,7 +35,6 @@ public class TeleportationBlockTileEntity extends TileEntity {
     @Override
     public SUpdateTileEntityPacket getUpdatePacket() {
         CompoundNBT nbtTag = new CompoundNBT();
-
         if (linkedBlockPos != null)
             nbtTag.putIntArray("teleportation_mod_pos_linked", linkedBlockPos);
 
