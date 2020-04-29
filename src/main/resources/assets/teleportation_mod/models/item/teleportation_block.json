@@ -1,0 +1,6 @@
+{
+  "parent": "teleportation_mod:block/teleportation_block",
+  "textures": {
+    "layer0": "teleportation_mod:block/teleportation_block_texture"
+  }
+}

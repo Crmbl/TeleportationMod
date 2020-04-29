@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " e ",
+    " x ",
+    "   "
+  ],
+  "key":
+  {
+    "e":
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    "x":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "teleportation_mod:teleportation_item",
+    "count": 1
+  }
+}

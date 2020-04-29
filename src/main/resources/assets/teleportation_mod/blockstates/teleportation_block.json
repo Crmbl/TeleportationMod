@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": [
+      { "model": "teleportation_mod:block/teleportation_block" }
+    ]
+  }
+}
