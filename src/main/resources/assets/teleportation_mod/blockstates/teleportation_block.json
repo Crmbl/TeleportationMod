@@ -1,7 +1,13 @@
 {
   "variants": {
-    "": [
-      { "model": "teleportation_mod:block/teleportation_block" }
-    ]
+    "type=bottom": {
+      "model": "teleportation_mod:block/teleportation_block"
+    },
+    "type=top": {
+      "model": "teleportation_mod:block/teleportation_block_top"
+    },
+    "type=double": {
+      "model": "teleportation_mod:block/teleportation_block_full"
+    }
   }
 }

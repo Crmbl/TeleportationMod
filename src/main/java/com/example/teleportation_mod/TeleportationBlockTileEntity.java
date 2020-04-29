@@ -17,10 +17,6 @@ public class TeleportationBlockTileEntity extends TileEntity {
         super(TeleportationModTileEntityTypes.TELEPORTATION_BLOCK.get());
     }
 
-    public void ResetLinkedBlock() {
-        linkedBlockPos = null;
-    }
-
     @Override
     public CompoundNBT write(CompoundNBT compound) {
         if (linkedBlockPos != null)

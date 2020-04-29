@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "teleportation_mod:block/teleportation_block_top_texture",
+    "particle": "teleportation_mod:block/teleportation_block_top_texture"
+  }
+}

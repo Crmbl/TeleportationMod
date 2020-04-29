@@ -1,5 +1,5 @@
 {
-  "parent": "block/slab",
+  "parent": "block/slab_top",
   "textures": {
     "bottom": "teleportation_mod:block/teleportation_block_bottom_texture",
     "top": "teleportation_mod:block/teleportation_block_top_texture",
