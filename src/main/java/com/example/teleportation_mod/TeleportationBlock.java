@@ -29,7 +29,9 @@ public class TeleportationBlock extends SlabBlock {
         super.animateTick(state, world, pos, random);
 
         TeleportationBlockTileEntity tile = ((TeleportationBlockTileEntity) world.getTileEntity(pos));
-        if (tile != null && tile.getLinkedBlockPos() != null && tile.getLinkedBlockPos().length != 0) {
+        if (tile == null) return;
+
+        if (tile.getLinkedBlockPos() != null && tile.getLinkedBlockPos().length != 0) {
             int x = pos.getX();
             int y = pos.getY();
             int z = pos.getZ();
@@ -91,16 +93,16 @@ public class TeleportationBlock extends SlabBlock {
             }
         }
 
-        MovePlayer(tile.getLinkedBlockPos(), player, pos, worldIn);
+        MovePlayer(tile.getLinkedBlockPos(), player, pos);
         return ActionResultType.SUCCESS;
     }
 
-    private void MovePlayer(int[] linkedBlockPos, PlayerEntity player, BlockPos actualPos, World world) {
+    private void MovePlayer(int[] linkedBlockPos, PlayerEntity player, BlockPos actualPos) {
         if (linkedBlockPos != null && linkedBlockPos.length != 0) {
             if (isPlayerOnTop(player, actualPos)){
-                player.setPositionAndUpdate(linkedBlockPos[0] + 0.5, linkedBlockPos[1] + 0.5, linkedBlockPos[2] + 0.5);
                 playUsingSound(player);
-                //TODO play sound to player too ! delay ? tickhandler?
+                player.setPositionAndUpdate(linkedBlockPos[0] + 0.5, linkedBlockPos[1] + 0.5, linkedBlockPos[2] + 0.5);
+                //TODO fix bug son
             }
         }
     }
