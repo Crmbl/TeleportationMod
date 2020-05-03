@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:teleportation_block"
+        "recipe": "teleportation_mod:teleportation_block"
       }
     }
   },
